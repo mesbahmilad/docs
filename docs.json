@@ -1,122 +1,101 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
-  "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+  "name": "Wundernode Docs",
+  "description": "Artist-friendly guides and node references for creating images, videos, and audio with Wundernode.",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://www.instasd.com"
   },
-  "favicon": "/favicon.svg",
+  "favicon": {
+    "light": "/assets/favicon-light.png",
+    "dark": "/assets/favicon-dark.png"
+  },
+  "colors": {
+    "primary": "#4F46E5",
+    "light": "#6D28D9",
+    "dark": "#312E81"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs",
+    "codeblocks": { "theme": "github-light" }
+  },
+  "topbarCta": {
+    "label": "Open Wundernode",
+    "href": "https://app.instasd.com"
+  },
   "navigation": {
-    "tabs": [
+    "groups": [
       {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
+        "group": "Get Started",
+        "pages": [
+          "get-started/what-are-nodes"
         ]
       },
       {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
+        "group": "Image Nodes",
+        "pages": [
+          "nodes/image/text-to-image",
+          "nodes/image/image-editor",
+          "nodes/image/image-upscale"
+        ]
+      },
+      {
+        "group": "Video Nodes",
+        "pages": [
+          "nodes/video/text-to-video",
+          "nodes/video/image-to-video",
+          "nodes/video/talking-portrait",
+          "nodes/video/lip-sync",
+          "nodes/video/frame-interpolation"
+        ]
+      },
+      {
+        "group": "Audio Nodes",
+        "pages": [
+          "nodes/audio/voice-generator"
+        ]
+      },
+      {
+        "group": "Text Nodes",
+        "pages": [
+          "nodes/text/generate-text"
+        ]
+      },
+      {
+        "group": "Input Nodes",
+        "pages": [
+          "nodes/input/text-display",
+          "nodes/input/image",
+          "nodes/input/video",
+          "nodes/input/audio"
         ]
       }
     ],
     "global": {
       "anchors": [
         {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
+          "anchor": "Community",
+          "icon": "discord",
+          "href": "https://discord.gg/tmWxHxVWCc"
         }
       ]
     }
   },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
-  },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
-    }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
-  },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "discord": "https://discord.gg/tmWxHxVWCc"
     }
+  },
+  "interaction": {
+    "drilldown": false
+  },
+  "seo": {
+    "title": "Wundernode Docs",
+    "description": "Learn how to create stunning images and videos using Wundernode. Visual guides, presets, and node tips for artists."
   }
 }

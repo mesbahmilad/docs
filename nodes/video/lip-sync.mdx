@@ -1,0 +1,114 @@
+---
+title: "Lip Sync (Video)"
+description: "Sync an existing video's lip movements to new audio — perfect for dubbing, dialogue replacement, or creative remixes."
+tags: ["Video", "Manipulation", "Advanced"]
+---
+
+<img src="/images/nodes/lip-sync-node.png" alt="Lip Sync Video Node" />
+
+# Lip Sync (Video)
+
+Replace the audio of a video and match the lips.  
+This node takes existing video footage and re-syncs the mouth movements to new audio — perfect for dubbing, dialogue replacement, or creative storytelling.
+
+---
+
+## 🪄 When to Use It
+
+Use Lip Sync when you have video footage and need to change what's being said.
+
+It works great for:
+- **Dubbing** — translate dialogue to other languages
+- **Dialogue replacement** — change what a character says
+- **Creative remixes** — make characters say new things
+- **Voice corrections** — fix audio without reshooting
+
+**Skill level:** Advanced  
+**Average time:** 90–180 seconds depending on length  
+**Cost:** High
+
+---
+
+## 🎚️ Controls and Parameters
+
+### **Video** (Video, Required)
+The footage you want to re-sync. Works best with:
+- Clear face visibility throughout
+- Minimal camera movement
+- Good lighting on the face
+
+💡 **Tip:** Close-up or medium shots work better than wide angles.
+
+### **Audios** (Array, Required)
+New audio to sync to the video. Supports up to 2 speakers:
+- **Audio 1** — main speaker (left side of frame)
+- **Audio 2** — second speaker (right side of frame)
+
+💡 **Tip:** If you only have one speaker, just connect Audio 1.
+
+### **Prompt** (Text, Optional)
+Describe the context: "Two people having a conversation" or "Single person speaking to camera"
+
+### **Audio Mode** (Select)
+- **Sequential** — speakers take turns (dialogue back and forth)
+- **Parallel** — both audio tracks play simultaneously, allowing precise timing control
+
+💡 **Tip:** Use Sequential for back-and-forth dialogue. Use Parallel when you need exact timing control — each audio track can have silence during non-speaking parts.
+
+**Example (Parallel mode):**
+- Speaker 1: 10-second audio with dialogue for first 5 seconds, then 5 seconds of silence
+- Speaker 2: 10-second audio with 5 seconds of silence, then dialogue for last 5 seconds
+- Result: Speaker 1 talks, then Speaker 2 responds, with perfect timing control
+
+### **Seed** (Number)
+Control randomness for consistent results.
+
+---
+
+## 🎨 Available Models
+
+Choose the model that fits your project needs:
+
+### **Infinite Talk** (Default)
+Advanced multi-speaker lip-sync with support for up to 2 simultaneous speakers. Handles complex dialogue and maintains facial expressions.
+
+Features:
+- Sequential or parallel audio modes
+- Custom prompts for scene context
+- Seed control for consistency
+
+### **PixVerse**
+Alternative lip-sync engine optimized for speed. Good for quick turnaround projects.
+
+💡 **Tip:** Use Infinite Talk for professional work with multiple speakers. Try PixVerse for faster processing.
+
+---
+
+## 🎨 What to Expect
+
+Lip-sync AI will:
+- Retime mouth movements to match new audio
+- Attempt to preserve facial expressions
+- Keep the rest of the video unchanged
+
+Best results with:
+- **Clear frontal face shots** — direct view of mouth
+- **Consistent lighting** — no dramatic shadows on face
+- **Audio matches video length** — similar duration helps quality
+
+Challenges with:
+- Profile views or turned heads
+- Very fast dialogue with lots of mouth movement
+- Poor video quality or compression artifacts
+- Multiple people talking when only one audio is provided
+
+---
+
+## 💬 Quick Tips
+
+- Audio length should roughly match video length for best sync
+- Use Voice Generator to create matching dialogue audio
+- Test with short clips first before processing long videos
+- If results look off, try adjusting the prompt to describe the scene better
+- Works best with videos that have minimal head movement
+
