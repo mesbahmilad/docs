@@ -6,7 +6,7 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "href": "https://www.instasd.com"
+    "href": "https://www.wundernode.com"
   },
   "favicon": {
     "light": "/assets/favicon-light.png",
@@ -26,13 +26,16 @@
   },
   "topbarCta": {
     "label": "Open Wundernode",
-    "href": "https://app.instasd.com"
+    "href": "https://app.wundernode.com"
   },
   "navigation": {
     "groups": [
       {
         "group": "Get Started",
         "pages": [
+          "index",
+          "get-started/first-image",
+          "get-started/first-video",
           "get-started/what-are-nodes"
         ]
       },
