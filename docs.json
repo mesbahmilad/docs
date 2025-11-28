@@ -4,8 +4,8 @@
   "name": "Wundernode Docs",
   "description": "Artist-friendly guides and node references for creating images, videos, and audio with Wundernode.",
   "logo": {
-    "light": "/logo/light.avif",
-    "dark": "/logo/dark.avif",
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png",
     "href": "https://www.wundernode.com"
   },
   "favicon": {
