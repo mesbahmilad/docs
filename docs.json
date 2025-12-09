@@ -40,6 +40,12 @@
         ]
       },
       {
+        "group": "Pricing",
+        "pages": [
+          "pricing/index"
+        ]
+      },
+      {
         "group": "Image Nodes",
         "pages": [
           "nodes/image/text-to-image",
