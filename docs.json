@@ -106,5 +106,10 @@
   "seo": {
     "title": "Wundernode Docs",
     "description": "Learn how to create stunning images and videos using Wundernode. Visual guides, presets, and node tips for artists."
+  },
+  "integrations": {
+    "gtm": {
+      "tagId": "GTM-T2MGS7CR"
+    }
   }
 }
