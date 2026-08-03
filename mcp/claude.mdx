@@ -1,0 +1,34 @@
+---
+title: "Using Wundernode with Claude (MCP)"
+description: "Connect Claude to Wundernode via MCP so Claude Code, Claude Desktop, or scheduled Claude tasks can build and run graphs on your account."
+---
+
+The Wundernode MCP server lets Claude (Claude Code, the Claude API, or a
+scheduled Claude task) build and run graphs on your account — the same
+operations the on-canvas copilot performs, exposed as
+[MCP](https://modelcontextprotocol.io) tools.
+
+## Connect Claude
+
+**claude.ai / Claude Desktop (recommended — no keys):** go to *Settings →
+Connectors → Add custom connector*, paste
+`https://app.wundernode.com/api/mcp`, and click Connect. You'll be sent to
+Wundernode to sign in (if needed) and approve access; that's it. Tokens are
+short-lived, scoped, and revocable — no secrets to store.
+
+**Claude Code (also no keys):**
+
+```bash
+claude mcp add wundernode --transport http https://app.wundernode.com/api/mcp
+```
+
+then run `/mcp` inside a session and pick Authenticate for wundernode — your browser opens the same approval page.
+
+During authorization you grant three scopes: `graphs:read` (view graphs and results), `graphs:write` (create/edit graphs, upload assets), and `graphs:run` (run generations — spends credits). OAuth clients can never manage API keys.
+
+**API keys (stateless callers only):** Claude surfaces — including claude.ai scheduled tasks — keep OAuth tokens refreshed automatically after the one-time approval, so they don't need keys. Keys are for environments with no durable token store: ephemeral CI runners, raw API scripts, third-party automation platforms. Create one on the API Keys page in Settings and send it as a header — keys have full account access, so treat them like passwords and revoke when unused:
+
+```bash
+claude mcp add wundernode --transport http https://app.wundernode.com/api/mcp \
+  --header "Authorization: Bearer wk_YOUR_KEY"
+```

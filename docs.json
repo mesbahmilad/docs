@@ -46,6 +46,13 @@
         ]
       },
       {
+        "group": "Integrations",
+        "pages": [
+          "mcp/claude"
+        ]
+      },
+
+      {
         "group": "Image Nodes",
         "pages": [
           "nodes/image/text-to-image",
